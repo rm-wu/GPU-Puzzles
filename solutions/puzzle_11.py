@@ -46,7 +46,7 @@ def conv_test(cuda):
         if i < a_size:
             a_shared[local_i] = a[i]
 
-        # Phase 2: Load fßilter into shared memory
+        # Phase 2: Load filter into shared memory
         # Only the first b_size threads load the filter elements
         # This ensures the filter is available to all threads in the block
         if local_i < b_size:
